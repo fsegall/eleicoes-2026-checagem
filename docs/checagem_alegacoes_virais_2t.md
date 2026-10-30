@@ -189,7 +189,19 @@ Lula cresceu +10.376.694, Flávio +3.721.538 (diferença = swing de 6.655.156). 
 | 1º turno | 341.766 | 157.387 (46,05%) | 143.900 (42,11%) | +13.487 |
 | 2º turno | 381.443 | 200.154 (52,48%) | 171.497 (44,96%) | +28.657 |
 
-Comparecimento no exterior cresceu +11,6% entre turnos (bem acima da média nacional, +2,4%), e a margem pró-Lula mais que dobrou. Por cidade, o padrão é de **polarização, não de troca de lado** — cada região intensificou a direção que já tinha no 1º turno:
+Comparecimento no exterior cresceu +11,6% entre turnos (bem acima da média nacional, +2,4%), e a margem pró-Lula mais que dobrou.
+
+**De onde vem esse crescimento de margem — mesma decomposição da seção 6.1, agora só pro exterior:**
+
+| Fonte do pool (exterior) | Valor | % do pool |
+|---|---:|---:|
+| Votos de outros candidatos eliminados no 1T (Cury, Renan, Caiado, Zema, etc.) | 29.718 | 42,2% |
+| Crescimento de comparecimento (eleitor novo) | 39.677 | 56,4% |
+| Queda de votos em branco | 1.141 | 1,6% |
+| Variação de votos nulos | -172 | -0,2% |
+| **Total do pool** | **70.364** | 100% |
+
+Os "outros candidatos" sozinhos (29.718) já somam quase o dobro do swing necessário (+15.170, de +13.487 pra +28.657) — a aritmética fecha com folga mesmo sem o crescimento de comparecimento. Diferente do padrão nacional (seção 6.1, onde outros candidatos eram 66% do pool e comparecimento só 21%), no exterior o **crescimento de comparecimento pesa mais (56,4%)** — proporcional ao crescimento de comparecimento ter sido bem maior ali (+11,6% vs +2,4% nacional). Do pool de 70.364 votos em jogo, Lula capturou 60,8% e Flávio 39,2% — essa diferença de captura gera o swing. Por cidade, o padrão é de **polarização, não de troca de lado** — cada região intensificou a direção que já tinha no 1º turno:
 
 | Ficaram mais pró-Lula (já eram) | Δ margem | Ficaram mais pró-Flávio (já eram) | Δ margem |
 |---|---:|---|---:|
