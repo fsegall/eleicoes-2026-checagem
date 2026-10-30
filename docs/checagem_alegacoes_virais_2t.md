@@ -213,6 +213,21 @@ Os "outros candidatos" sozinhos (29.718) já somam quase o dobro do swing necess
 
 Europa inteira (Lisboa, Porto, Paris, Londres, Dublin, Munique, Berlim, Barcelona) ficou mais pró-Lula; EUA/Japão (Miami, Orlando, Boston, Tóquio, Nagóia, Hamamatsu) e Ciudad del Este (fronteira agro no Paraguai) ficaram mais pró-Flávio. Nenhuma cidade trocou de lado — é o mesmo efeito de consolidação/polarização de 2º turno visto no resto do país (seção 6.1), não uma anomalia do exterior.
 
+### 6.2 O swing do Nordeste é maior, em votos, que qualquer mecanismo operacional testado
+
+Decompondo o swing nacional (seção 6.1) por região: quanto cada uma contribuiu, em termos líquidos (ganho Lula − ganho Flávio, 1T→2T), pra virada de margem de 6.655.156 votos.
+
+| Região | Ganho Lula | Ganho Flávio | Swing líquido | % da margem nacional (4.430.191) |
+|---|---:|---:|---:|---:|
+| Nordeste | +2.955.848 | +397.763 | **+2.558.085** | **57,7%** |
+| Resto do Brasil | +7.420.846 | +3.323.775 | +4.097.071 | 92,5% |
+
+**O swing líquido do Nordeste sozinho (+2.558.085) é maior que qualquer um dos três mecanismos "suspeitos" testados neste documento** — maior que prorrogação (+509.302, seção 2), agregação (+826.618, seção 3) e biometria (+1.111.551, seção 4) somados (+2.447.471). Numericamente, é o maior componente pró-Lula identificado em toda a análise.
+
+**Mas isso não é comparável aos outros três no sentido que importa.** Prorrogação/agregação/biometria testam se um **incidente operacional** (algo que, na ausência do incidente, não teria acontecido daquele jeito) inflou o resultado. O swing do Nordeste não é um incidente — é consolidação política normal de 2º turno (transferência de voto de candidatos eliminados + crescimento de comparecimento) numa região que já era maciçamente pró-Lula desde o 1º turno. Para ilustrar o quanto isso é estrutural, não um evento do dia da eleição: **excluindo o Nordeste inteiramente do total nacional** (todo o voto, não só o swing), o resultado viraria Flávio +9.223.505 — mas esse teste não mede fraude ou irregularidade, mede o óbvio (uma região eleitoralmente concentrada pesa muito quando removida do total, o mesmo valeria pra qualquer reduto eleitoral de qualquer candidato, em qualquer eleição).
+
+**Conclusão: o maior "mecanismo" que gerou a margem de Lula foi geografia política real (Nordeste + consolidação do 1º turno em todo o país), não nenhuma das três alegações de fraude testadas — que seguem sendo, individualmente e somadas, pequenas demais pra terem decidido.**
+
 ## 7. Teste de mecanismo causal: biometria/comparecimento explicam a prorrogação?
 
 Hipótese: seção com mais falha de biometria ou mais comparecimento teria fila maior e mais chance de ainda estar votando às 17h (prorrogação por volume de demanda, não por decisão política).
