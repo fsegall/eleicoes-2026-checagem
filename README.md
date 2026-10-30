@@ -24,6 +24,8 @@ Além disso, o projeto investigou um conjunto de anomalias operacionais encontra
 
 **Resultado resumido:** nenhuma das três alegações, isolada ou somada, tem escala suficiente para ter decidido o resultado. Cada uma gera um viés real e mensurável a favor de Lula em relação à média nacional, mas a margem oficial (+4.430.191 votos) resiste a excluir qualquer um dos grupos por completo. O detalhamento completo — com todas as tabelas, métodos e ressalvas — está em [`docs/checagem_alegacoes_virais_2t.md`](docs/checagem_alegacoes_virais_2t.md).
 
+**Relatório em PDF (com os gráficos) pra baixar:** [`docs/relatorio_checagem_2t_2026.pdf`](docs/relatorio_checagem_2t_2026.pdf) — exportado do notebook completo, código incluído.
+
 ## Estrutura do repositório
 
 ```
