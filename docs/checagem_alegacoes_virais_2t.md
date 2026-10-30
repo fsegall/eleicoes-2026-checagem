@@ -1,6 +1,10 @@
 # Checagem de alegações virais — 2º turno 2026 (Presidente)
 
-Três alegações que circularam sobre o 2º turno (Lula × Flávio Bolsonaro), checadas com dados oficiais do TSE (Boletim de Urna Web, `data/bu_web_2t/*.csv`). Resultado oficial nacional de referência:
+Três alegações que circularam sobre o 2º turno (Lula × Flávio Bolsonaro), checadas com dados oficiais do TSE (Boletim de Urna Web, `data/bu_web_2t/*.csv`).
+
+> **Aviso sobre o escopo.** Este documento testa consistência interna dos dados abertos exatamente como o TSE os publicou — não atesta que esses dados não foram alterados antes da divulgação, nem que a logística da eleição ocorreu sem falha ou irregularidade fora do que é capturado neles. Não partimos do pressuposto de que instituições do governo brasileiro, TSE incluído, sejam necessariamente confiáveis. Ausência de anomalia estatística nos dados divulgados não resolve se esses dados são, eles mesmos, um retrato fiel do que aconteceu nas urnas — pergunta que está logicamente a montante do próprio dado aberto, e que nenhuma análise como esta tem como responder. O que segue é o que os dados abertos disponíveis permitem verificar, nem mais, nem menos.
+
+Resultado oficial nacional de referência:
 
 | Candidato | Votos | % |
 |---|---:|---:|
