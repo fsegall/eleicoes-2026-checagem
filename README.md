@@ -10,7 +10,7 @@ Esta é uma análise estatística dos **dados abertos exatamente como o TSE os p
 - Uma atestação de que a logística da eleição (preparação de urnas, transmissão, apuração) ocorreu sem falha, fraude ou irregularidade fora do que é capturado nesses dados;
 - Uma certificação de lisura do processo eleitoral como um todo.
 
-Os autores desta análise não partem do pressuposto de que instituições do governo brasileiro — TSE incluído — sejam necessariamente confiáveis. A ausência de anomalia estatística nos dados divulgados não resolve a pergunta de se esses dados são, eles mesmos, um retrato fiel do que aconteceu nas urnas — essa é uma pergunta sobre a qual dado aberto, por definição, não tem como se pronunciar, porque ela está logicamente a montante do próprio dado. Não estamos afirmando que tudo funcionou perfeitamente bem; estamos afirmando que, **dentro do que os dados abertos disponibilizados permitem verificar**, as alegações específicas testadas abaixo não se sustentam.
+A ausência de anomalia estatística nos dados divulgados não resolve a pergunta de se esses dados são, eles mesmos, um retrato fiel do que aconteceu nas urnas — essa é uma pergunta sobre a qual dado aberto, por definição, não tem como se pronunciar, porque ela está logicamente a montante do próprio dado. Não estamos afirmando que tudo funcionou perfeitamente bem; estamos afirmando que, **dentro do que os dados abertos disponibilizados permitem verificar**, as alegações específicas testadas abaixo não se sustentam.
 
 ## O que este projeto responde
 
