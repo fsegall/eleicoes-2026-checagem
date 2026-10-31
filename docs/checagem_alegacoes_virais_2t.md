@@ -604,7 +604,20 @@ Proporção idêntica à do DF como um todo — sem distorção.
 
 **Mas quase todas essas 2.278 seções do DF duplicam com seções de *outros* estados, não entre si:** só **125 seções (1,79% do DF)** repetem a tupla com *outra seção do próprio DF* (62 grupos — 61 pares + 1 trio). Isolando só essas 125: Lula 14.596 × Flávio 17.406 (45,61%, margem -2.810). Excluindo-as do DF: 45,73%. De novo, nenhuma distorção — mesma proporção Flávio-favorável do DF inteiro.
 
-**Conclusão da seção 19:** a duplicação exata de resultado é real e numericamente expressiva (23,6% das seções), mas todas as evidências (dispersão geográfica nacional, concentração no porte médio não no grande, ausência de viés partidário, espaço combinatório pequeno pra eleição apertada) apontam para coincidência estatística, não cópia de boletim entre urnas.
+### 19.2 As seções duplicadas têm falha de biometria diferente do normal?
+
+Último teste cruzado: se a duplicação de resultado estivesse ligada a algum tipo de manipulação por bypass de identificação, esperaríamos taxa de falha biométrica fora do padrão nessas seções.
+
+| Recorte | Taxa de falha biométrica |
+|---|---:|
+| Nacional | 6,732% |
+| Seções duplicadas (ponderada, 117.752 seções) | 6,735% |
+| Seções duplicadas (média simples por seção) | 6,843% |
+| Resto (não-duplicadas) | 6,731% |
+
+Diferença de 0,003 a 0,11 ponto percentual — ruído, não sinal. As seções com tupla duplicada não têm nenhum traço distintivo de biometria em relação ao resto do país.
+
+**Conclusão da seção 19:** a duplicação exata de resultado é real e numericamente expressiva (23,6% das seções), mas todas as evidências (dispersão geográfica nacional, concentração no porte médio não no grande, ausência de viés partidário, taxa de biometria idêntica à nacional, espaço combinatório pequeno pra eleição apertada) apontam para coincidência estatística, não cópia de boletim entre urnas nem bypass de identificação.
 
 ## 20. Seções com zero votos em um dos dois candidatos
 
