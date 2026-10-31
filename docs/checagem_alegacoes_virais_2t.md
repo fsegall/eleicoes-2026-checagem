@@ -224,6 +224,8 @@ A maioria não bate com palavra-chave simples, mas **isso não equivale a "sem e
 
 **Conclusão: outliers fortes de zona existem, são raros (0,47%), concentram no mesmo tipo de local institucional já conhecido (presídios, aldeias indígenas, campi), pendem mais pra Lula por motivo sociológico já identificado — sem escala pra mover o resultado.**
 
+**Lista completa das 2.275 seções** (UF, município, zona, seção, local de votação, endereço, votos, z-score) disponível em [`docs/ilhas_outliers_completo.csv`](ilhas_outliers_completo.csv) e [`docs/ilhas_outliers_completo.xlsx`](ilhas_outliers_completo.xlsx).
+
 ## 6. Delta 1º × 2º turno por seção (Lula × Flávio)
 
 Comparação do `% Lula` (entre Lula+Flávio) por seção entre 1º e 2º turno, usando `votacao_secao_2026_BR.csv` (mesmo dataset pros dois turnos, evita problema de casamento de seção entre datasets diferentes).
