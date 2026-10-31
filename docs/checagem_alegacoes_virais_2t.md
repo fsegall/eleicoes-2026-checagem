@@ -226,6 +226,24 @@ A maioria não bate com palavra-chave simples, mas **isso não equivale a "sem e
 
 **Lista completa das 2.275 seções** (UF, município, zona, seção, local de votação, endereço, votos, z-score) disponível em [`docs/ilhas_outliers_completo.csv`](ilhas_outliers_completo.csv) e [`docs/ilhas_outliers_completo.xlsx`](ilhas_outliers_completo.xlsx).
 
+### 5.3 "Ilha política de verdade": exigindo que a zona já penda pro lado oposto
+
+O censo da seção 5.2 marca qualquer seção que destoa fortemente da própria zona, **sem checar quem está ganhando a zona ou a seção**. Isso inclui casos que não são realmente "ilha em território adversário" — ex.: uma seção militar em Brasília (zona 11, DF) com 19,3% Lula foi marcada como outlier pró-Flávio só por destoar da zona (média 48,03% Lula) — mas essa zona já pendia (levemente) pro próprio Flávio; não existe "invasão" de território a destacar ali, só reforço estatístico de uma tendência que já existia.
+
+Pra isolar as ilhas *de verdade* ("pró-Lula cercada de Flávio" e vice-versa), criamos dois recortes mais estritos, sempre a partir do mesmo censo de 488.048 seções elegíveis:
+
+**Nível 2 — Ilhas cruzadas (exige zona do lado oposto):** além de `|z|≥3`, exige que a média da zona já penda pro adversário (`média da zona < 50%` pra ilha pró-Lula, `> 50%` pra ilha pró-Flávio). **1.515 seções**: 1.233 pró-Lula em território de Flávio + 282 pró-Flávio em território de Lula. Margem dentro do grupo: +62.051 (60,47% Lula) — pequena, mas mais concentrada que o censo bruto.
+
+**Nível 3 — Ilhas cruzadas restritas (exige que a seção vire maioria):** além da condição do nível 2, exige que a seção *realmente inverta o resultado local* (`% Lula da seção > 50%` numa zona Flávio-dominante, e vice-versa) — não basta destoar, a seção precisa ser de fato vencida pelo "lado errado". **1.278 seções**: 1.082 pró-Lula em território de Flávio + 196 pró-Flávio em território de Lula. Margem dentro do grupo: +62.751 (62,74% Lula).
+
+| Nível | N seções | Pró-Lula | Pró-Flávio | Margem no grupo |
+|---|---:|---:|---:|---:|
+| 1. Outlier puro (seção 5.2) | 2.275 | 1.763 | 512 | +103.428 |
+| 2. Outlier + zona oposta | 1.515 | 1.233 | 282 | +62.051 |
+| 3. Outlier + zona oposta + seção vira maioria | 1.278 | 1.082 | 196 | +62.751 |
+
+Em todos os níveis a assimetria pró-Lula se mantém (proporção de ~4:1 a ~5,5:1), e a margem gerada continua numericamente irrelevante pra qualquer teste de exclusão nacional (a maior, +103.428, é 2,3% da margem oficial). Listas completas em [`docs/ilhas_cruzadas_completo.csv`](ilhas_cruzadas_completo.csv)/`.xlsx` (nível 2) e [`docs/ilhas_cruzadas_restritas.csv`](ilhas_cruzadas_restritas.csv)/`.xlsx` (nível 3).
+
 ## 6. Delta 1º × 2º turno por seção (Lula × Flávio)
 
 Comparação do `% Lula` (entre Lula+Flávio) por seção entre 1º e 2º turno, usando `votacao_secao_2026_BR.csv` (mesmo dataset pros dois turnos, evita problema de casamento de seção entre datasets diferentes).

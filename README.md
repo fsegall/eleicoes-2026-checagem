@@ -30,14 +30,26 @@ Além disso, o projeto investigou um conjunto de anomalias operacionais encontra
 
 ```
 ├── notebooks/
-│   └── 01_eleicoes_2026_presidente.ipynb   # Notebook principal: exploração + relatório visual
+│   └── 01_eleicoes_2026_presidente.ipynb     # Notebook principal: exploração + relatório visual
 ├── docs/
-│   ├── checagem_alegacoes_virais_2t.md     # Documento principal: checagem das 3 alegações + achados
-│   ├── tse_dados_abertos.md                # Dicionário de campos e notas técnicas dos datasets do TSE
-│   └── achados_2t_ocorrencias_urna.md      # Classificação inicial de ocorrências (prorrogação/contingência)
-├── data/                                    # Dados brutos do TSE — não versionados, ver "Dados" abaixo
-└── CLAUDE.md                                # Notas de ambiente e contexto do projeto
+│   ├── checagem_alegacoes_virais_2t.md       # Documento principal: checagem das 3 alegações + todos os achados (20 seções)
+│   ├── relatorio_checagem_2t_2026.pdf        # PDF do notebook completo, exportado (código + gráficos)
+│   ├── tse_dados_abertos.md                  # Dicionário de campos e notas técnicas dos datasets do TSE
+│   ├── achados_2t_ocorrencias_urna.md        # Classificação inicial de ocorrências (prorrogação/contingência)
+│   ├── ilhas_outliers_completo.csv/.xlsx     # Censo completo das 2.275 seções-outlier por zona eleitoral (seção 5.2)
+│   ├── ilhas_cruzadas_completo.csv/.xlsx     # 1.515 seções-outlier cuja zona já pende pro candidato adversário (seção 5.3, nível 2)
+│   └── ilhas_cruzadas_restritas.csv/.xlsx    # 1.278 seções que além de outlier, de fato invertem o resultado da zona (seção 5.3, nível 3)
+├── data/                                      # Dados brutos do TSE — não versionados, ver "Dados" abaixo
+└── CLAUDE.md                                  # Notas de ambiente e contexto do projeto
 ```
+
+As três planilhas de "ilhas" (seções 5.2/5.3 do documento) respondem à mesma pergunta — "existem seções que destoam fortemente da própria vizinhança eleitoral?" — em três níveis de rigor crescente:
+
+1. **`ilhas_outliers_completo`** — qualquer seção que destoa estatisticamente da própria zona (`|z-score|≥3`), não importa quem está ganhando a zona ou a seção.
+2. **`ilhas_cruzadas_completo`** — além de destoar, exige que a zona ao redor já penda pro candidato adversário (ex.: só conta como "ilha pró-Lula" se a zona já for majoritariamente de Flávio).
+3. **`ilhas_cruzadas_restritas`** — além disso, exige que a seção realmente *inverta* o resultado local (vença o candidato que perde na zona), não só se aproxime dele.
+
+Cada arquivo traz UF, município, zona, seção, nome e endereço do local de votação, votos de cada candidato e o z-score.
 
 ## Dados
 
