@@ -473,6 +473,46 @@ Mesmo teste da seção 8 (biometria), agora com taxa de branco/nulo: seções co
 
 **Conclusão: nulo, igual à biometria.** As ilhas lulistas não têm taxa de branco/nulo diferente do resto da zona bolsonarista. Fecha mais uma hipótese operacional possível — nem biometria nem branco/nulo explicam esses bolsões de Lula em território de Flávio; o fenômeno parece genuinamente político/demográfico, não um artefato detectável nesses canais.
 
+## 18. Comparação com pesquisas de intenção de voto (fora do escopo de dados do TSE)
+
+**Aviso de escopo específico desta seção:** diferente de todo o resto do documento, esta seção usa **pesquisas eleitorais** (Datafolha, Quaest, MDA — dados de terceiros, não do TSE), buscadas via web em cobertura jornalística, não baixadas como dado aberto estruturado. Pesquisa de intenção de voto é uma **previsão feita antes da eleição** (amostragem, modelagem de comparecimento) — estatisticamente independente da apuração do TSE (que **conta** o voto depois do fato). Erro de pesquisa não é evidência de problema na apuração; é só desempenho preditivo do instituto. Mantido aqui porque ilumina (sem comprovar) possíveis explicações para a dinâmica do 2º turno já discutida nas seções 6, 6.1 e 6.2.
+
+### 18.1 Pesquisas de véspera do 2º turno (24/10) vs. resultado real
+
+| Pesquisa | Lula (válidos) | Flávio (válidos) |
+|---|---:|---:|
+| Datafolha (24/10) | 49% | 51% |
+| Quaest (24/10) | 49% | 51% |
+| **Resultado oficial (TSE, válidos)** | **51,79%** | **48,21%** |
+
+As duas pesquisas finais convergiam em Flávio +2pp (dentro da margem de erro). O resultado real foi Lula +3,58pp — swing de **~5,8pp** em relação à projeção, no sentido oposto. Erro concentrado em **subestimar Lula**.
+
+### 18.2 Pesquisas de véspera do 1º turno (03/10) vs. resultado real
+
+Resultado real do 1º turno (válidos, todos os candidatos): Lula 45,16% × Flávio 47,02% (calculado a partir de `votacao_secao_2026_BR.csv`, seção 6.1).
+
+| Instituto | Lula previsto | Erro Lula | Flávio previsto | Erro Flávio |
+|---|---:|---:|---:|---:|
+| Datafolha | 45,0% | +0,16pp | 42,0% | **+5,02pp** |
+| Quaest | 46,0% | -0,84pp | 45,0% | **+2,02pp** |
+| MDA | 47,8% | -2,64pp | 42,1% | **+4,92pp** |
+
+Erro concentrado em **subestimar Flávio** — padrão oposto ao do 2º turno.
+
+**Achado principal: o erro troca de lado entre os turnos.** No 1º turno, as pesquisas pegaram bem o Lula e erraram pra baixo no Flávio; no 2º turno, o oposto — erraram pra baixo no Lula. Não é um viés simples e unidirecional ("pesquisa sempre favorece X"); é mais consistente com dinâmicas diferentes em cada momento — possível voto subdeclarado pró-Flávio no 1º turno (padrão já documentado em eleições anteriores com candidatos bolsonaristas no Brasil, 2018/2022) e consolidação de última hora de eleitores de candidatos eliminados pendendo mais pra Lula no 2º turno do que as pesquisas, feitas com 1-3 semanas de antecedência, conseguiram captar.
+
+### 18.3 Pesquisa regional do Nordeste: o "boom" de Lula já aparecia?
+
+Único recorte regional confiável encontrado (Datafolha; não foi possível confirmar um cruzamento Nordeste-específico da Quaest comparável pra este confronto Lula×Flávio no período):
+
+| Data | Lula (NE) | Flávio (NE) |
+|---|---:|---:|
+| Datafolha 02/10 | 62% | 31% |
+| Datafolha 08/10 | 61% | 35% |
+| **Resultado real, 2º turno (NE)** | **69,37%** | **30,63%** |
+
+**O sinal de "Nordeste pró-Lula" já existia há semanas, mas a tendência visível na pesquisa ia no sentido contrário ao que aconteceu depois:** entre 02/10 e 08/10, a pesquisa mostrava Flávio ganhando terreno no Nordeste (31%→35%), não Lula. O resultado final inverteu isso por completo — Lula terminou mais alto que qualquer leitura de pesquisa, Flávio mais baixo. Sugere que a consolidação regional pró-Lula se concentrou na reta final (depois de 08/10, sem dado de pesquisa pra confirmar o momento exato), consistente com o mecanismo de transferência de voto de candidatos eliminados já identificado nas seções 6.1/6.2 — um processo que se resolve perto da data, difícil de antecipar por pesquisa.
+
 ## Conclusão geral
 
 Nenhuma das três alegações, isolada ou somada, tem escala suficiente pra ter decidido o 2º turno:
