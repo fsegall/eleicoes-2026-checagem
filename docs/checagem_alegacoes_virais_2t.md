@@ -104,6 +104,24 @@ Hipótese testada: se falha de biometria fosse usada pra fraudar resultado em se
 
 **Importante — por que biometria continua sendo o vetor de risco mais relevante, mesmo sem evidência estatística de exploração:** diferente de prorrogação/agregação/tamanho de seção (que são sobre *quando/onde* o voto aconteceu), falha de biometria é o único mecanismo testado nesta análise que reduz a verificação de identidade de quem vota ao nível mais fraco — a conferência visual do documento pelo mesário, no lugar da biometria. Isso é uma superfície real de risco (fraude de personificação), em tese, independente de qualquer sinal nos dados agregados. Os testes acima (4.1, 8) não encontraram padrão estatístico de exploração desse vetor, mas o motivo central permanece de pé: **não é possível auditar, com os dados abertos do TSE, em quem votaram especificamente as pessoas que passaram por liberação manual** — o voto é secreto por desenho, e não há forma de cruzar `QT_ELEI_BIOM_SEM_HABILITACAO` com escolha individual de candidato. "Não achamos evidência de exploração" é diferente de "esse canal foi auditado e está limpo" — é a lacuna estrutural mais honesta desta análise inteira.
 
+### 4.2 Escalando o corte por número absoluto de falhas (não taxa)
+
+Variação do teste de decil: em vez de *taxa* de falha por seção, cortar por número *absoluto* de falhas biométricas (`QT_ELEI_BIOM_SEM_HABILITACAO`, campo que já vem por urna/seção no BU Web).
+
+**Qualquer falha (biom_falha>0) não isola nada:** 497.412 seções (99,6% do total) têm pelo menos 1 voto sem biometria — é universal, de baixa intensidade na maioria dos lugares. Sem informação.
+
+| Corte (nº absoluto de falhas) | N seções | % do total | Margem no recorte | Margem excluindo o recorte |
+|---|---:|---:|---:|---:|
+| >20 falhas | 147.410 | 29,53% | +2.024.474 (52,63% Lula) | +2.405.717 |
+| >100 falhas | 127 | 0,025% | +5.801 (59,02% Lula) | +4.424.390 |
+| **Margem oficial nacional** | | | | **+4.430.191** |
+
+Mesmo excluindo quase 1 em cada 3 seções do país (>20 falhas, 4.257.630 votos com falha envolvidos), Lula mantém mais da metade da margem oficial. No corte mais extremo (>100 falhas, só 127 seções), a margem cai apenas ~5.800 votos — irrelevante.
+
+**Caso aprofundado — top 10 seções por número absoluto de falhas:** concentram em Lauro de Freitas/BA (7 das 10, taxas de 85-93% de falha, comparecimento 310-355). Resultado dessas 7 seções: 65,10% Lula — **abaixo da média do próprio município (67,20% no 2T)**. Ou seja, nem dentro da própria cidade essas seções de falha extrema destoam para mais Lula; são uma fatia representativa de um município já fortemente pró-Lula por conta própria, não um bolsão anômalo. Por UF, o corte >100 falhas concentra em BA (38 de 127 seções), coerente com o caso de Lauro de Freitas.
+
+**Ressalva metodológica importante:** esta família de testes (seção 4, 4.1, 4.2) mede correlação ecológica/agregada entre uma característica da seção (intensidade de falha biométrica) e o resultado da seção — nunca isola como votaram especificamente os eleitores sem biometria (impossível com voto secreto, ver seção 4.1). Além disso, falha biométrica correlaciona com tamanho de seção e geografia (seção pequena/rural/remota → mais falha, seção 4.1), que são, por si só, fatores que já correlacionam com voto em Lula independente de biometria — então parte do sinal encontrado pode ser confundimento geográfico, não efeito direto de biometria. O teste mais controlado desta análise pra esse confundimento é a seção 8 (biometria dentro da própria zona eleitoral, "ilhas lulistas"), que também deu nulo.
+
 ## 5. Outliers individuais de seção (dentro da própria zona eleitoral)
 
 Metodologia: para cada seção com ≥20 votos válidos (Lula+Flávio), z-score do `% Lula` em relação à média/desvio-padrão da própria zona eleitoral (mesma UF/município/zona, ≥15 seções na zona pra ter uma base estatística mínima).
