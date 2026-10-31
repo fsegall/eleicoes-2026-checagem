@@ -67,6 +67,10 @@ O motor de consulta é o [DuckDB](https://duckdb.org/), que lê os CSVs diretame
 
 Toda classificação usa fuso horário oficial por UF/município (não aproximação estatística), com as exceções legais de fuso (AC, parte do AM, MT, MS, RO, RR) tratadas explicitamente. Testes estatísticos incluem decis de taxa por seção, z-score dentro da própria zona eleitoral para detecção de outliers, e testes de exclusão (recalcular o resultado nacional removendo cada grupo por completo) para separar "viés direcional real" de "margem suficiente para decidir". A seção "Ressalvas epistemológicas" de [`docs/checagem_alegacoes_virais_2t.md`](docs/checagem_alegacoes_virais_2t.md) é explícita sobre os limites do que dado aberto agregado consegue (e não consegue) verificar — em particular, o sigilo do voto impede isolar como votaram especificamente os eleitores sem confirmação biométrica.
 
+## Licença
+
+Código e análise sob [MIT](LICENSE). Os dados do TSE usados são dados abertos governamentais, não cobertos por esta licença (e não estão versionados neste repositório — ver "Dados" acima).
+
 ## Autoria
 
 **Livres Soluções de Software, Informação e Pesquisa**
