@@ -515,6 +515,65 @@ Erro concentrado em **subestimar Flávio** — padrão oposto ao do 2º turno.
 
 **O sinal de "Nordeste pró-Lula" já existia há semanas, mas a tendência visível na pesquisa ia no sentido contrário ao que aconteceu depois:** entre 02/10 e 08/10, a pesquisa mostrava Flávio ganhando terreno no Nordeste (31%→35%), não Lula. O resultado final inverteu isso por completo — Lula terminou mais alto que qualquer leitura de pesquisa, Flávio mais baixo. Uma leitura possível é que a consolidação regional pró-Lula se concentrou na reta final (depois de 08/10, sem dado de pesquisa pra confirmar o momento exato), consistente com o mecanismo de transferência de voto de candidatos eliminados já identificado nas seções 6.1/6.2 — mas, pela mesma ressalva da seção 18.2, essa é uma hipótese compatível com o dado, não a única, e o dado de pesquisa não serve pra confirmar ou descartar manipulação na apuração.
 
+## 19. Seções com resultado numericamente idêntico (tupla Lula/Flávio/Branco/Nulo repetida)
+
+Teste de forense eleitoral clássico: existem seções com a contagem exata de votos (Lula, Flávio, Branco, Nulo) repetida em outra seção? Repetição exata entre urnas distantes geograficamente é um padrão associado, em outras eleições/países, a cópia de boletim — mas também é o resultado esperado de pura coincidência combinatória quando o espaço de resultados plausíveis é pequeno (seções de porte baixo/médio, eleição apertada).
+
+**Nacional: 117.752 das 499.205 seções ativas (23,59%) têm a tupla completa (Lula, Flávio, Branco, Nulo) idêntica à de pelo menos outra seção.**
+
+- **Não se concentra nas seções maiores — pelo contrário.** Taxa de duplicação por faixa de comparecimento: <50 eleitores 14,68%; 150-199: 21,66%; 200-249: 27,45%; 250-299: 28,31% (pico, é a faixa com mais seções); 300-349: 14,52%; 350+: só 1,96%. Se fosse cópia deliberada, esperaríamos concentração nas seções grandes (mais "lucrativo" fraudar); o padrão observado é o oposto — concentra onde há mais seções competindo pelo mesmo espaço pequeno de combinações possíveis (efeito "paradoxo do aniversário").
+- **87,6% dos pares/grupos duplicados estão espalhados entre UFs diferentes** (103.126 de 117.752 seções) — só 286 seções duplicam dentro da própria zona eleitoral. Cópia local de boletim produziria o padrão inverso (concentração geográfica); o observado é dispersão nacional, assinatura de coincidência estatística.
+- **Verificação do espaço combinatório:** para comparecimento=250, por exemplo, só 2.981 tuplas distintas aparecem de fato entre 3.564 seções — bem menos que o espaço teórico de combinações possíveis (~2,67 milhões). O voto real se concentra numa faixa estreita de proporções (eleição nacional apertada + seções com perfil demográfico parecido dentro da mesma região), o que por si só já explica a taxa alta de coincidência.
+- **Margem dentro das seções duplicadas: -14.141 votos (Flávio), 49,98% Lula** — essencialmente um empate técnico, sem direção partidária. Teste de margem + exclusão: isolando só as seções duplicadas, Flávio venceria por margem mínima; excluindo-as do total nacional, Lula mantém +4.444.332 (praticamente igual à margem oficial de +4.430.191). Duplicata não decide nem distorce o resultado.
+- **Por UF, maior incidência:** DF (32,69%), MS (31,73%), GO (30,82%), AP (29,10%), PR (28,65%) — sem padrão político claro (não favorece um lado), e RJ fica em posição intermediária (8º lugar), diferente de outras anomalias desta análise onde RJ se destacava.
+
+### 19.1 Caso aprofundado: Distrito Federal
+
+DF é a UF com maior taxa de duplicação (32,7%, 2.278 das 6.969 seções). Investigado em detalhe porque é o maior outlier nacional:
+
+| Recorte | Lula | Flávio | Margem | % Lula |
+|---|---:|---:|---:|---:|
+| DF geral (real, todas as seções) | 825.224 | 979.542 | -154.318 (Flávio) | 45,72% |
+| DF só seções duplicadas (2.278) | 267.263 | 320.657 | -53.394 (Flávio) | 45,46% |
+| DF excluindo as duplicadas | 557.961 | 658.885 | -100.924 (Flávio) | 45,85% |
+
+Proporção idêntica à do DF como um todo — sem distorção.
+
+**Mas quase todas essas 2.278 seções do DF duplicam com seções de *outros* estados, não entre si:** só **125 seções (1,79% do DF)** repetem a tupla com *outra seção do próprio DF* (62 grupos — 61 pares + 1 trio). Isolando só essas 125: Lula 14.596 × Flávio 17.406 (45,61%, margem -2.810). Excluindo-as do DF: 45,73%. De novo, nenhuma distorção — mesma proporção Flávio-favorável do DF inteiro.
+
+**Conclusão da seção 19:** a duplicação exata de resultado é real e numericamente expressiva (23,6% das seções), mas todas as evidências (dispersão geográfica nacional, concentração no porte médio não no grande, ausência de viés partidário, espaço combinatório pequeno pra eleição apertada) apontam para coincidência estatística, não cópia de boletim entre urnas.
+
+## 20. Seções com zero votos em um dos dois candidatos
+
+Teste complementar: existe alguma seção ativa (comparecimento > 0) onde um dos dois candidatos recebeu **zero** votos?
+
+**Nacional: 4 seções com Lula=0 (0,001%) e 106 seções com Flávio=0 (0,021%)** — sobre 499.205 seções ativas. Assimetria de ~26x entre os dois lados, mas ambos os grupos são eventos raríssimos em termos absolutos.
+
+**As 4 seções com Lula=0** (pequenas, 49-118 eleitores):
+
+| UF | Município | Comparecimento | Flávio |
+|---|---|---:|---:|
+| RS | Arroio do Padre | 118 | 116 |
+| RS | Cândido Godói | 85 | 82 |
+| PA | Jacareacanga | 50 | 50 |
+| PA | Chaves | 49 | 48 |
+
+Arroio do Padre e Cândido Godói são as mesmas cidades de colonização alemã do RS já identificadas na seção 5.1 como os municípios mais pró-Flávio da análise — bate com achado anterior, reforça em vez de contradizer.
+
+**As 106 seções com Flávio=0** concentram em **AM (30), MA (20), PA (16)** — Norte/Nordeste — com comparecimento bem maior que o lado Lula=0 (até 354 eleitores, todos votando Lula). Top 5 por comparecimento:
+
+| UF | Município | Comparecimento | Lula |
+|---|---|---:|---:|
+| AM | Tabatinga | 365 | 354 |
+| AM | Tabatinga | 347 | 338 |
+| AM | Maués | 337 | 333 |
+| AM | Atalaia do Norte | 335 | 325 |
+| AM | Santo Antônio do Içá | 330 | 329 |
+
+Tabatinga, Atalaia do Norte e Santo Antônio do Içá são exatamente os municípios de fronteira do Amazonas já identificados na seção 5.1 como os mais extremamente pró-Lula do país.
+
+**Conclusão da seção 20:** os dois extremos (zero-Lula no RS, zero-Flávio no AM/MA/PA) batem com os padrões geográficos de homogeneidade política/demográfica já documentados na seção 5.1 (colonização alemã pró-Flávio × fronteira amazônica indígena/ribeirinha pró-Lula). São seções pequenas, de comunidades isoladas e politicamente/demograficamente homogêneas — consistente com o que já se sabia da geografia eleitoral local, não um padrão novo ou evidência de manipulação.
+
 ## Conclusão geral
 
 Nenhuma das três alegações, isolada ou somada, tem escala suficiente pra ter decidido o 2º turno:
